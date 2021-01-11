@@ -21,8 +21,8 @@ namespace Turtle.Application
         public State Observe(Coordinate position)
         {
             if (!IsInBounds(position)) return State.IsOutOfBounds;
-            else if (IsDanger(position)) return State.IsDanger;
             else if (IsDead(position)) return State.IsDead;
+            else if (IsDanger(position)) return State.IsDanger;
             else if (IsExit(position)) return State.IsExit;
             else return State.Normal;
         }
